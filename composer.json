@@ -1,0 +1,19 @@
+{
+    "name": "daniloberardinelli/fizz-buzz-kata-php",
+    "authors": [
+        {
+            "name": "danilo",
+            "email": "danilo@studiomado.it"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "": [
+                "src"
+            ]
+        }
+    }
+}

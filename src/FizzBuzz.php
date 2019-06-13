@@ -17,14 +17,14 @@ class FizzBuzz
         );
     }
 
-    public function getFizzBuzzOrNumber($number)
+    public function getFizzBuzzOrNumber($input)
     {
         $output = '';
-        foreach ($this->soundNumbers as $sound => $number) {
-            if ($number % 3 == 0) {
-                $output .= 'fizz';
+        foreach ($this->soundNumbers as $soundNumber => $sound) {
+            if ($input % $soundNumber == 0) {
+                $output .= $sound;
             }
         }
-        return $output ?: $number;
+        return $output ?: $input;
     }
 }

@@ -3,22 +3,22 @@
 
 class Children
 {
-    private $soundNumberList;
+    private $soundNumbers;
 
-    private function __construct($soundNumberList = array())
+    private function __construct(SoundNumbers $soundNumbers)
     {
-        $this->soundNumberList = $soundNumberList;
+        $this->soundNumbers = $soundNumbers;
     }
 
-    public static function initializeFromSoundNumberList($soundNumberList = array())
+    public static function initializeFromSoundNumbers(SoundNumbers $soundNumbers)
     {
-        return new Children($soundNumberList);
+        return new Children($soundNumbers);
     }
 
     public function saidSoundOrNumber($input)
     {
         $output = '';
-        foreach ($this->soundNumberList as $number => $sound) {
+        foreach ($this->soundNumbers->getList() as $number => $sound) {
             if ($input % $number == 0) {
                 $output .= $sound;
             }

@@ -12,6 +12,16 @@ class SoundNumbers
 
     public static function inizializeFromArray($soundNumberList = array())
     {
+        foreach($soundNumberList as $number => $sound) {
+            if (!is_int($number) || !is_string($sound)) {
+                throw new Excempion('data is not valid!');
+            }
+        }
+        return new self($soundNumberList);
+    }
 
+    public function getList()
+    {
+        return $this->soundNumberList;
     }
 }

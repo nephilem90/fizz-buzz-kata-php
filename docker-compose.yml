@@ -1,0 +1,7 @@
+version: '2'
+services:
+  php:
+    image: "daijie/php7-alpine"
+    volumes:
+      - .:/var/www
+    command: sh -c "cd /var/www && vendor/bin/phpunit"
